@@ -6,4 +6,7 @@
   <% end %>
 </ul>
 
-<%= link_to "<< Back", session.delete(:return_to) %>
+<%= link_to "delete tag", tag_path(@tag), method: :delete,
+  data: { confirm: "Really delete this tag?" } %><br>
+
+<%= link_to "<< Back to Tag List", tags_path %>
